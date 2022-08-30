@@ -7,7 +7,7 @@
     <title>Form Pendaftaran</title>
 </head>
 <body>
-    <a href="index.php">Back to Home</a>
+    <a href="../welcome.php">Back to Home</a>
     <h1>isi di bawah ini</h1>
     <form action="input_data_pendaftaran.php" method="post">
 

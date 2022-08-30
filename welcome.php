@@ -11,10 +11,8 @@
 <body>
     <h1>Selamat datang di Jala Futsal</h1>
     <p>Silakan klik tombol daftar di bawah ini</p>
-    <a href="pendaftar.php">Daftar</a>
-    <br>
-    <h3>Masuk sebagai admin</h3>
-    <a href="data_lapangan.php">Isi data lapangan</a> ||
-    <a href="data_pembayaran.php">Update Pembayaran</a>
+    <a href="./form/pendaftar.php">Daftar</a>
+    <br><br>
+    <a href="./logout.php">LOG OUT</a>
 
 </html>
