@@ -1,3 +1,6 @@
+<?php
+    include "../koneksi.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +12,7 @@
 <body>
     <a href="../welcome.php">Back to Home</a>
     <h1>isi di bawah ini</h1>
-    <form action="input_data_pendaftaran.php" method="post">
+    <form action="../input/input_data_pendaftaran.php" method="post">
 
         <label for="">Id Pendaftar</label><br>
         <input type="text" name="id_pendaftar" id=""  value="<?= rand(0000,9999)?>" readonly>
@@ -42,7 +45,7 @@
             <option value="transfer">Transfer</option>
         </select>
         <br><br>
-        <button type="sumbit">Kirim Data</button>
+        <button href="../welcome.php" type="sumbit">Kirim Data</button>
 </form>
 </body>
 </html>

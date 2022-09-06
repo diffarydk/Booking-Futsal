@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
 <body>
     <a href="welcome.php">Back to Home</a>
     <h1>isi di bawah ini</h1>
-    <form action="input_data_pembayaran.php" method="post">
+    <form action="../input/input_data_pembayaran.php" method="post">
 
         <label for="">Id Pembayar</label><br>
         <input type="text" name="id_pembayaran" id="" value="<?= rand(0000,9999)?>" readonly>
