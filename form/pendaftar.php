@@ -8,11 +8,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pendaftaran</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .form{
+        background-color: green;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    input, textarea, select{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    button{
+        width: 100%;
+        background-color: black;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        color: white;
+    }
+    button:hover{
+        background-color: white;
+    }
+</style>
 </head>
 <body>
     <a href="../welcome.php">Back to Home</a>
     <h1>isi di bawah ini</h1>
-    <form action="../input/input_data_pendaftaran.php" method="post">
+    <form class="form"action="../input/input_data_pendaftaran.php" method="post">
 
         <label for="">Id Pendaftar</label><br>
         <input type="text" name="id_pendaftar" id=""  value="<?= rand(0000,9999)?>" readonly>
@@ -45,7 +79,7 @@
             <option value="transfer">Transfer</option>
         </select>
         <br><br>
-        <button href="../welcome.php" type="sumbit">Kirim Data</button>
+        <button type="sumbit">Kirim Data</button>
 </form>
 </body>
 </html>

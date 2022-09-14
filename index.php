@@ -14,7 +14,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $query = "SELECT * FROM login WHERE username='$username' AND password='$password'";
+        $query = "call login('$username','$password')";
 
         $result = mysqli_query($koneksi, $query);
         if ($result->num_rows > 0){
