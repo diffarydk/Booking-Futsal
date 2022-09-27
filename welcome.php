@@ -21,7 +21,7 @@
         }
         .menu-list{
             float: left;
-        }
+        } 
         .menu-list a {
             display: block;
             color: white;

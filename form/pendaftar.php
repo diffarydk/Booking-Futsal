@@ -41,11 +41,42 @@
     button:hover{
         background-color: white;
     }
+    .menu{
+            list-style-type: none;
+            overflow: hidden;
+            background-color: green;
+            padding: 0;
+            margin: 0;
+        }
+    .menu-list{
+            float: left;
+        } 
+    .menu-list a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    .menu-list a:hover{
+            background-color: black;
+        }
+        .judul{
+            width: 100;
+            padding: 1px 20px;
+            background-color: green;
+            color: white;
+        }
 </style>
 </head>
 <body>
-    <a href="../welcome.php">Back to Home</a>
-    <h1>isi di bawah ini</h1>
+    <ul class="menu">
+        <li class="menu-list"><a href="../welcome.php">Home</a></li>
+        <li class="menu-list"><a href="pendaftar.php">daftar</a></li>
+        <li class="menu-list"><a href="../logout.php">Logout</a></li>
+    </ul>
+    <div class="judul"><h1>isi di bawah ini</h1></div>
     <form class="form"action="../input/input_data_pendaftaran.php" method="post">
 
         <label for="">Id Pendaftar</label><br>

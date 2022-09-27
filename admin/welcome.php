@@ -15,13 +15,45 @@ if($_SESSION['level'] = "") {
     <meta name="viewport" content="widht-device-widht, initial-scale=1.0">
     <title>Selamat datang</title>
 </head>
-
+<style>
+     .jumbotron{
+            padding: 30px;
+        }
+        .container{
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .jumbotron .container{
+            max-width: 100%;
+            background-color: black;
+            color: white;
+        }
+        .jumbotron h3{
+            text-align: left;
+            color: white;
+            font-family: 'raleway', helvetica, arial, sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        .jumbotron a{
+            text-align: left;
+            color: blue;
+            font-family: 'raleway', helvetica, arial, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;            
+        }
+</style>
 <body>
+    <div class="jumbotron"><div class="container">
     <h3>Masuk sebagai admin</h3>
     <a href="data_lapangan.php">Isi data lapangan</a> ||
     <a href="data_pembayaran.php">Update Pembayaran</a>||
     <br><br>
     <br><br>
     <a href="../logout.php">LOG OUT</a>
+    </div></div>
 
 </html>
