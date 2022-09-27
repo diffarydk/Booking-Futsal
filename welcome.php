@@ -17,7 +17,7 @@
             overflow: hidden;
             background-color: green;
             padding: 0;
-            margin: 0 630px;
+            margin: 0;
         }
         .menu-list{
             float: left;
