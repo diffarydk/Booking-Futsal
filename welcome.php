@@ -72,7 +72,7 @@
     <div class="jumbotron">
         <div class="container">
         <h1>Selamat datang di Jala Futsal</h1>
-        <p>Silakan klik tombol daftar di bawah ini</p>
+        <p>Silakan klik tombol daftar di atas ini</p>
     <br><br>
         </div>
     </div>
