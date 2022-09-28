@@ -16,8 +16,12 @@ if($_SESSION['level'] = "") {
     <title>Selamat datang</title>
 </head>
 <style>
+    body{
+        background-color: black;
+    }
      .jumbotron{
             padding: 30px;
+            text-align: center;
         }
         .container{
             margin: 0 auto;
@@ -26,11 +30,11 @@ if($_SESSION['level'] = "") {
         }
         .jumbotron .container{
             max-width: 100%;
-            background-color: black;
+            background-color: #1a1a1d;
             color: white;
         }
         .jumbotron h3{
-            text-align: left;
+            text-align: center;
             color: white;
             font-family: 'raleway', helvetica, arial, sans-serif;
             font-weight: 600;
@@ -38,8 +42,7 @@ if($_SESSION['level'] = "") {
             text-transform: uppercase;
         }
         .jumbotron a{
-            text-align: left;
-            color: blue;
+            color: #66fcf1;
             font-family: 'raleway', helvetica, arial, sans-serif;
             font-weight: 600;
             font-size: 20px;
@@ -49,8 +52,9 @@ if($_SESSION['level'] = "") {
 <body>
     <div class="jumbotron"><div class="container">
     <h3>Masuk sebagai admin</h3>
-    <a href="data_lapangan.php">Isi data lapangan</a> ||
-    <a href="data_pembayaran.php">Update Pembayaran</a>||
+    <a href="data_lapangan.php">Data Lapangan</a>&emsp;
+    <a href="data_pembayaran.php">Data Pembayaran</a>&emsp;
+    <a href="data_pendaftar.php">Data Pendaftar</a>&emsp;
     <br><br>
     <br><br>
     <a href="../logout.php">LOG OUT</a>

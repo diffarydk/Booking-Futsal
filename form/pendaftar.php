@@ -95,7 +95,7 @@
         <select name="jenis_lapangan" id="">
             <option value="a">Lapangan A (MATRAS)</option>
             <option value="b">Lapangan B (SINTETIS)</option>
-            <option value="b">Lapangan C (VINYL)</option>
+            <option value="c">Lapangan C (VINYL)</option>
         </select>
         <br><br>
         <label for="">Jam Mulai</label><br>
