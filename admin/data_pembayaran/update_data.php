@@ -1,5 +1,5 @@
 <?php
-    include "../koneksi.php";
+    include "../../koneksi.php";
     $jenis_lapangan = $_POST['jenis_lapangan'];
     $jam_mulai = $_POST['jam_mulai'];
     $jam_selesai = $_POST['jam_selesai'];

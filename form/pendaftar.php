@@ -12,11 +12,14 @@
     body{
         margin: 0;
         padding: 0;
+        background-color: #501f3a;
+        font-family: arial, helvetica, sans-serif;
     }
     .form{
-        background-color: green;
+        background-color: #501f3a;
         padding: 20px;
         border-radius: 5px;
+        color: white;
     }
     input, textarea, select{
         width: 100%;
@@ -29,7 +32,7 @@
     }
     button{
         width: 100%;
-        background-color: black;
+        background-color: steelblue;
         padding: 14px 20px;
         margin: 8px 0;
         border: none;
@@ -39,17 +42,18 @@
         color: white;
     }
     button:hover{
-        background-color: white;
+        background-color: black;
     }
     .menu{
             list-style-type: none;
             overflow: hidden;
-            background-color: green;
+            background-color: #728fce;
             padding: 0;
             margin: 0;
         }
     .menu-list{
             float: left;
+            font-size: 13px;
         } 
     .menu-list a {
             display: block;
@@ -65,15 +69,16 @@
         .judul{
             width: 100;
             padding: 1px 20px;
-            background-color: green;
+            background-color: #123c69;
             color: white;
+            text-align: center;
+            text-transform: uppercase;
         }
 </style>
 </head>
 <body>
     <ul class="menu">
         <li class="menu-list"><a href="../welcome.php">Home</a></li>
-        <li class="menu-list"><a href="pendaftar.php">daftar</a></li>
         <li class="menu-list"><a href="../logout.php">Logout</a></li>
     </ul>
     <div class="judul"><h1>isi di bawah ini</h1></div>

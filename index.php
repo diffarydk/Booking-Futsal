@@ -41,6 +41,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login form</title>
+        <link rel="stylesheet" href="style.css">
         <style>
             body{
                 font-family: sans-serif;
@@ -48,64 +49,30 @@
                 background-size: cover;
                 background-repeat: no-repeat;
             }
-            .kotak_login{
-                width:350px;
-                background: white; 
-                margin: 80px auto ;
-                padding: 30px 20px;
-                border-radius: 5px;
-        }
-        .judul {
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        .input_form{
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            font-size: 11pt;
-            margin-bottom: 20px;
-            border-color: black;
-            border-radius: 5px;
-        }
-        .tombol_login{
-            background: gray;
-            color: white;
-            font-size: 11pt;
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-
-        }
-        .link{
-            color: red;
-            text-decoration: none;
-            font-size: 11pt;
-
-        }
-        .teks{
-            text-align: center;
-        }
         </style>
     </head>
     <body>
         <div> 
             <h4 style="color: red;"><?=$_SESSION['error']?></h4>
-        </div> 
-        <div class="kotak_login">
-        <p class="judul">Ayo login sekarang</p>
-        <form action="" method="post">
-
-            <input class="input_form"type="text" placeholder="Username" name="username" required>
-            <br><br>
-            <input class="input_form" type="password" placeholder="Password" name="password" required>
-            <br><br>
-            <button class="tombol_login" name="sumbit" class="btn">login</button>
-
-            <p class="teks">Anda belum punya akun? <a class="link" href="#">Register</a></p>
-        </form>
+            <div class="center">
+      <h1>Login</h1>
+      <form action="" method="post">
+        <div class="txt_field">
+          <input type="text" placeholder="Username" name="username" required>
+          <span></span>
+          <label>Username</label>
         </div>
+        <div class="txt_field">
+          <input type="password" placeholder="Password" name="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" name="sumbit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="./form/registrasi.php">Signup</a>
+        </div>
+      </form>
+    </div>
+
     </body>
     </html>

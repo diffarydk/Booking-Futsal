@@ -1,5 +1,5 @@
 <?php
-    include "../koneksi.php";
+    include "../../koneksi.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,13 +46,14 @@
     .menu{
             list-style-type: none;
             overflow: hidden;
-            background-color: #123c69;
+            background-color: #728fce;
             padding: 0;
             margin: 0;
         }
     .menu-list{
             float: left;
             font-size: 13px;
+            background-color: #728fce;
         } 
     .menu-list a {
             display: block;
@@ -75,30 +76,29 @@
     </style>
 <body>
 <ul class="menu">
-        <li class="menu-list"><a href="./welcome.php">Home</a></li>
-        <li class="menu-list"><a href="../logout.php">Logout</a></li>
+        <li class="menu-list"><a href="../welcome.php">Home</a></li>
+        <li class="menu-list"><a href="../../logout.php">Logout</a></li>
     </ul>
     <div class="judul"><h1>Table lapangan</h1></div>
-    <form class= "form" action="../input/input_data_lapangan.php" method="post">
+    <form class= "form">
 
     <table class="table" border="1" align="center">
 <tr>
-            <th>Id pendaftar</th>
-            <th>Jenis lapangan</th>
-            <th>Jam mulai</th>
-            <th>Jam akhir</th>
-            <th>Action</th>
+            <th style="text-align:center">Id pendaftar</th>
+            <th style="text-align:center">Jenis lapangan</th>
+            <th style="text-align:center">Jam mulai</th>
+            <th style="text-align:center">Jam akhir</th>
+            <th style="text-align:center">Action</th>
         </tr>
     <?php
-    $no=1;
     $query = mysqli_query($koneksi, "SELECT * FROM data_pendaftar");
     while ($data=mysqli_fetch_array($query)){?>
         <tr>
-            <td><?php echo $data['id_pendaftar'] ?></td>
-            <td><?php echo $data['jenis_lapangan'] ?></td>
-            <td><?php echo $data['jam_mulai'] ?></td>
-            <td><?php echo $data['jam_selesai'] ?></td>
-            <td>
+            <td style="text-align:center"><?php echo $data['id_pendaftar'] ?></td>
+            <td style="text-align:center"><?php echo $data['jenis_lapangan'] ?></td>
+            <td style="text-align:center"><?php echo $data['jam_mulai'] ?></td>
+            <td style="text-align:center"><?php echo $data['jam_selesai'] ?></td>
+            <td style="text-align:center">
                 <a href="edit.php?id=<?php echo $data['id_pendaftar']?>">Edit</a>&emsp;
                 <a class="delete" href="delete.php?id=<?php echo $data['id_pendaftar']?>">Delete</a>
             </td> 

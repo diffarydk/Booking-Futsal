@@ -1,9 +1,8 @@
 <?php
-    include "../koneksi.php";
+    include "../../koneksi.php";
     $id = $_GET['id'];
     $select = mysqli_query($koneksi, "SELECT * FROM data_pendaftar WHERE id_pendaftar='$id'");
-    if ($data = mysqli_fetch_array($select)){
-        ?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,10 @@
 <body>
     <div class="container my-5">
         <h2>Edit Data</h2>
-    <form action="update_data.php" method="post">
+        <?php
+        while ($data = mysqli_fetch_array($select)){
+            ?>
+    <form action="update_data.php" value="id"  method="post">
             <div class="row mb-3">
             <label class="col-sm-3 col-form-label">Jenis Lapangan</label>
             <div class="col-sm-6">

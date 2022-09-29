@@ -12,7 +12,11 @@
 
     $insert = mysqli_query($koneksi, "INSERT INTO data_pendaftar SET id_pendaftar='$id_pendaftar', nama_pendaftar='$nama_pendaftar', nomor_hp='$nomor_hp', alamat='$alamat', jenis_lapangan='$jenis_lapangan', jam_mulai='$jam_mulai', jam_selesai='$jam_selesai', jenis_pembayaran='$jenis_pembayaran'");
     if($insert == true){
-        header('location: ../welcome.php');
+    echo $message = 'data sudah masuk';
+        echo "<SCRIPT> //not showing me this
+            alert('$message')
+            window.location.replace('../welcome.php');
+        </SCRIPT>";
     } else {
         echo "<script>alert('Gagal input data pendaftar')</script>";
     }

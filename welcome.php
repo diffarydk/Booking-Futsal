@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if($_SESSION['level'] = "") {
+    header('location: index.php');
+}
+?>
+
 <DOCTYPE html>
 <html lang="en">
 
@@ -6,35 +14,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="widht-device-widht, initial-scale=1.0">
     <title>Selamat datang</title>
-    <style>
-        .body{
-            margin: 0;
-            padding: 0;
-            color: red;
-        }
-        .menu{
-            list-style-type: none;
-            overflow: hidden;
-            background-color: green;
-            padding: 0;
-            margin: 0;
-        }
-        .menu-list{
-            float: left;
-        } 
-        .menu-list a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 24px;
-        }
-        .menu-list a:hover{
-            background-color: black;
-        }
-        .jumbotron{
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+     .jumbotron{
             padding: 30px;
+            text-align: center;
         }
         .container{
             margin: 0 auto;
@@ -43,39 +30,30 @@
         }
         .jumbotron .container{
             max-width: 100%;
-            background-color: black;
+            background-color: #1a1a1d;
+            color: white;
         }
-        .jumbotron h1{
-            text-align: left;
+        .jumbotron h3{
+            text-align: center;
             color: white;
             font-family: 'raleway', helvetica, arial, sans-serif;
             font-weight: 600;
             font-size: 40px;
             text-transform: uppercase;
         }
-        .jumbotron p{
-            text-align: left;
-            color: white;
+        .jumbotron a{
+            color: #66fcf1;
             font-family: 'raleway', helvetica, arial, sans-serif;
             font-weight: 600;
             font-size: 20px;
             text-transform: uppercase;            
         }
-    </style>
-</head>
-
+</style>
 <body>
-    <ul class="menu">
-        <li class="menu-list"><a href="./form/pendaftar.php">Daftar</a></li>
-        <li class="menu-list"><a href="./logout.php">Log out</a></li>
-    </ul>
-    <div class="jumbotron">
-        <div class="container">
-        <h1>Selamat datang di Jala Futsal</h1>
-        <p>Silakan klik tombol daftar di atas ini</p>
-    <br><br>
-        </div>
-    </div>
+    <div class="jumbotron"><div class="container">
+    <h3>Selamat datang di Jala Futsal</h3>
+    <a href="./form/pendaftar.php">Daftar</a>&emsp;
+    <a href="./logout.php">LOG OUT</a>
+    </div></div>
 
-    </body>
 </html>

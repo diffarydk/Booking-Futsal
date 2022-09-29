@@ -52,9 +52,9 @@ if($_SESSION['level'] = "") {
 <body>
     <div class="jumbotron"><div class="container">
     <h3>Masuk sebagai admin</h3>
-    <a href="data_lapangan.php">Data Lapangan</a>&emsp;
-    <a href="data_pembayaran.php">Data Pembayaran</a>&emsp;
-    <a href="data_pendaftar.php">Data Pendaftar</a>&emsp;
+    <a href="./data_lapangan/data_lapangan.php">Data Lapangan</a>&emsp;
+    <a href="./data_pembayaran/data_pembayaran.php">Data Pembayaran</a>&emsp;
+    <a href="./data_pendaftar/data_pendaftar.php">Data Pendaftar</a>&emsp;
     <br><br>
     <br><br>
     <a href="../logout.php">LOG OUT</a>
