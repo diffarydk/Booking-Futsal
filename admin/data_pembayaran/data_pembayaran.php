@@ -86,6 +86,7 @@
 
     <table class="table" border="1" align="center">
 <tr>
+            <th style="text-align:center">Id pembayaran</th>
             <th style="text-align:center">Id pendaftar</th>
             <th style="text-align:center">Jenis lapangan</th>
             <th style="text-align:center">Jenis pembayaran</th>
@@ -94,18 +95,18 @@
             <th style="text-align:center">Action</th>
         </tr>
     <?php
-    $query = mysqli_query($koneksi, "SELECT * FROM data_pendaftar INNER JOIN data_pembayaran 
-    ON data_lapangan.id_pendaftar = data_pembayaran.id_pendaftar");
+    $query = mysqli_query($koneksi, "SELECT * FROM data_pembayaran");
     while ($data=mysqli_fetch_array($query)){?>
         <tr>
+            <td style="text-align:center"><?php echo $data['id_pembayaran'] ?></td>
             <td style="text-align:center"><?php echo $data['id_pendaftar'] ?></td>
             <td style="text-align:center"><?php echo $data['jenis_lapangan'] ?></td>
             <td style="text-align:center"><?php echo $data['jenis_pembayaran'] ?></td>
-            <td style="text-align:center"><?php echo $data['nominal'] ?></td>
-            <td style="text-align:center"><?php echo $data['jam_selesai'] ?></td>
+            <td style="text-align:center"><?php echo $data['nominal_pembayaran'] ?></td>
+            <td style="text-align:center"><?php echo $data['status_pembayaran'] ?></td>
             <td  class="mid" style="text-align:center">
-                <a href="edit.php?id=<?php echo $data['id_pendaftar']?>">Edit</a> 
-                <a class="delete" href="delete.php?id=<?php echo $data['id_pendaftar']?>">Delete</a>
+                <a href="edit.php?id=<?php echo $data['id_pembayaran']?>">Edit</a> 
+                <a class="delete" href="delete.php?id=<?php echo $data['id_pembayaran']?>">Delete</a>
             </td> 
         </tr>
     <?php }
