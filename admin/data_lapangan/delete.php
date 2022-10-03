@@ -2,7 +2,7 @@
     include "../../koneksi.php"; 
     $id=$_GET["id"];
 
-    $delete = mysqli_query($koneksi, "DELETE FROM data_pendaftar WHERE id_pendaftar = $id");
+    $delete = mysqli_query($koneksi, "DELETE FROM data_lapangan WHERE id_lapangan = $id");
     if($delete){
         header('location: data_lapangan.php');
     } else {

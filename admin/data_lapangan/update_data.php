@@ -1,11 +1,11 @@
 <?php
     include "../../koneksi.php";
-    $id_pendaftar = $_POST['id_pendaftar'];
+    $id_lapangan = $_POST['id_lapangan'];
     $jenis_lapangan = $_POST['jenis_lapangan'];
-    $jam_mulai = $_POST['jam_mulai'];
-    $jam_selesai = $_POST['jam_selesai'];
+    $type_lapangan = $_POST['type_lapangan'];
 
-    $update = mysqli_query($koneksi, "UPDATE data_pendaftar SET jenis_lapangan='$jenis_lapangan', jam_mulai='$jam_mulai', jam_selesai='$jam_selesai' WHERE id_pendaftar = '$id_pendaftar'");
+
+    $update = mysqli_query($koneksi, "UPDATE data_lapangan SET jenis_lapangan='$jenis_lapangan', type_lapangan='$type_lapangan' WHERE id_lapangan = '$id_lapangan'");
     if($update){
         header('location: data_lapangan.php');
     } else {

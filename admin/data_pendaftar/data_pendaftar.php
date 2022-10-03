@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pendaftaran</title>
+    <title>Table Pendaftar</title>
 </head>
 <style>    
     body{
@@ -95,6 +95,7 @@
             <th style="text-align:center">Jam Mulai</th>
             <th style="text-align:center">Jam Selesai</th>
             <th style="text-align:center">Jenis Pembayaran</th>
+            <th style="text-align:center">Action</th>
         </tr>
     <?php
     $query = mysqli_query($koneksi, "SELECT * FROM data_pendaftar");
@@ -108,6 +109,11 @@
             <td style="text-align:center"><?php echo $data['jam_mulai'] ?></td>
             <td style="text-align:center"><?php echo $data['jam_selesai'] ?></td>
             <td style="text-align:center"><?php echo $data['jenis_pembayaran'] ?></td>
+            <td style="text-align:center">
+                <a href="edit.php?id=<?php echo $data['id_pendaftar']?>">Edit</a>&emsp;
+                <a class="delete" href="delete.php?id=<?php echo $data['id_pendaftar']?>">Delete</a>
+            </td> 
+        </tr>
 
         </tr>
     <?php }

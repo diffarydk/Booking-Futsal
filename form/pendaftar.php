@@ -104,10 +104,10 @@
         </select>
         <br><br>
         <label for="">Jam Mulai</label><br>
-        <input type="time" name="jam_mulai" id="">
+        <input type="time" name="jam_mulai" step="3600" id="">
         <br><br>
         <label for="">Jam Selesai</label><br>
-        <input type="time" name="jam_selesai" id="">
+        <input type="time" name="jam_selesai" step="3600" id="">
         <br><br>
         <label for="">Jenis Pembayaran</label><br>
         <select name="jenis_pembayaran" id="">

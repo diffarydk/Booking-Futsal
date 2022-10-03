@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pendaftaran</title>
+    <title>Table pembayaran</title>
 </head>
 <style>    
     body{
@@ -94,7 +94,8 @@
             <th style="text-align:center">Action</th>
         </tr>
     <?php
-    $query = mysqli_query($koneksi, "SELECT * FROM data_pendaftar");
+    $query = mysqli_query($koneksi, "SELECT * FROM data_pendaftar INNER JOIN data_pembayaran 
+    ON data_lapangan.id_pendaftar = data_pembayaran.id_pendaftar");
     while ($data=mysqli_fetch_array($query)){?>
         <tr>
             <td style="text-align:center"><?php echo $data['id_pendaftar'] ?></td>

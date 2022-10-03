@@ -1,7 +1,7 @@
 <?php
     include "../../koneksi.php";
     $id = $_GET['id'];
-    $select = mysqli_query($koneksi, "SELECT * FROM data_lapangan WHERE id_lapangan='$id'");
+    $select = mysqli_query($koneksi, "SELECT * FROM data_pendaftar WHERE id_pendaftar='$id'");
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@
     <div class="row mb-3">
             <label class="col-sm-3 col-form-label">Id pendaftar</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" name="id_lapangan" value="<?php echo $data['id_lapangan'] ?>" readonly>
+                <input type="text" class="form-control" name="id_pendaftar" value="<?php echo $data['id_pendaftar'] ?>" readonly>
             </div>
           </div>
             <div class="row mb-3">
@@ -33,9 +33,15 @@
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-3 col-form-label">Type Lapangan</label>
+            <label class="col-sm-3 col-form-label">Jam mulai</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" name="type_lapangan" value="<?php echo $data['type_lapangan'] ?>">
+                <input type="time" class="form-control" name="jam_mulai" value="<?php echo $data['jam_mulai'] ?>">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Jam akhir</label>
+            <div class="col-sm-6">
+                <input type="time" class="form-control" name="jam_selesai" value="<?php echo $data['jam_selesai'] ?>">
             </div>
           </div>
           <div class="row mb-3">
@@ -43,7 +49,7 @@
             <button type="submit" class="col-sm-3 col-form-label">Kirim</button>
             </div>
             <div class="col-sm-3 d-grid">
-                <a class="btn btn-outline-primary" href="data_lapangan.php" name="proses" role="button">Cancel</a>
+                <a class="btn btn-outline-primary" href="data_pendaftar.php" name="proses" role="button">Cancel</a>
             </div>
           </div>
         </form>

@@ -84,23 +84,19 @@
 
     <table class="table" border="1" align="center">
 <tr>
-            <th style="text-align:center">Id pendaftar</th>
-            <th style="text-align:center">Jenis lapangan</th>
-            <th style="text-align:center">Jam mulai</th>
-            <th style="text-align:center">Jam akhir</th>
+            <th style="text-align:center">Jenis Lapangan</th>
+            <th style="text-align:center">Type Lapangan</th>
             <th style="text-align:center">Action</th>
         </tr>
     <?php
-    $query = mysqli_query($koneksi, "SELECT * FROM data_pendaftar");
+    $query = mysqli_query($koneksi, "SELECT * FROM data_lapangan");
     while ($data=mysqli_fetch_array($query)){?>
         <tr>
-            <td style="text-align:center"><?php echo $data['id_pendaftar'] ?></td>
             <td style="text-align:center"><?php echo $data['jenis_lapangan'] ?></td>
-            <td style="text-align:center"><?php echo $data['jam_mulai'] ?></td>
-            <td style="text-align:center"><?php echo $data['jam_selesai'] ?></td>
+            <td style="text-align:center"><?php echo $data['type_lapangan'] ?></td>
             <td style="text-align:center">
-                <a href="edit.php?id=<?php echo $data['id_pendaftar']?>">Edit</a>&emsp;
-                <a class="delete" href="delete.php?id=<?php echo $data['id_pendaftar']?>">Delete</a>
+                <a href="edit.php?id=<?php echo $data['id_lapangan']?>">Edit</a>&emsp;
+                <a class="delete" href="delete.php?id=<?php echo $data['id_lapangan']?>">Delete</a>
             </td> 
         </tr>
     <?php }
